@@ -27,7 +27,7 @@
           <!-- <a-video id="video" width="4" height="3" position="0 0 1" rotation="-90 0 0" src="assets\videoplayback.mp4" autoplay muted controls>
             </a-video> -->
             <a-image width="4" height="3" position="0 0 1" rotation="-90 0 0" src="assets\ey_logo.png" id="imageEY"></a-image>
-            <a-image width="4" height="3" position="0 0 1" rotation="-90 0 0" src="assets\weclomeey.jpg" hidden id="wey"></a-image>
+            <a-image width="4" height="3" position="0 0 1" rotation="-90 0 0" src="assets\welcomeey.jpg" hidden id="wey"></a-image>
     <!-- <a-entity geometry="primitive: plane" material="src: #video" width="4" height="3" position="0 0 1" rotation="-90 0 0"></a-entity> -->
           
 
@@ -53,11 +53,11 @@
   </a-scene>
   <script>
 
-var arToolkitSource = new THREEx.ArToolkitSource({
+// var arToolkitSource = new THREEx.ArToolkitSource({
 	
-		sourceType : 'video',
-		sourceUrl : THREEx.ArToolkitContext.baseURL + '..assets/videoplayback.mp4',		
-	});
+// 		sourceType : 'video',
+// 		sourceUrl : THREEx.ArToolkitContext.baseURL + '..assets/videoplayback.mp4',		
+// 	});
 
 
     $(document).ready(function(){
@@ -73,7 +73,7 @@ $("#boxObj").attr("color","green");
       $("#imageEY").on("click",function(){
 $("#wey").show();
       });
-      
+
     });
   </script>
 </body>
