@@ -15,18 +15,18 @@
 
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs>
-    <!-- create your content here. just a box for now -->
-    <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
-    <a-text value="Hello World!" position='0 0.5 1' id="textObj"></a-text> -->
-    <!-- <a-assets>
-      <img id="myImage" src="assets/eyceo.jpg" position='0 0.5 3' width="200" height="100">
-    </a-assets> -->
+    <!-- Declare all assets like image and videos inside assets tag and point the object in the component. -->
+    <a-assets>
+        <video id="video" src="assets\videoplayback.mp4"></video>
+    </a-assets>
+   
     <!-- define a camera which will move according to the marker position -->
 	<!-- <a-marker-camera preset='hiro'></a-marker-camera> -->
 	<a-marker type='pattern' patternUrl='pattern-marker.patt'>
       <!-- <a-box material='opacity: 0.5;' position='0 0.5 0' id="boxObj" color="red"></a-box> -->
       <!-- <a-text value="Hello World!" id="textObj" position='0 0 0' geometry="primitive:plane;width:20px"></a-text> -->
-          <a-video id="video" width="4" height="3" position="0 0 1" rotation="-90 0 0" src="assets\videoplayback.mp4" autoplay muted controls>
+          <!-- <a-video id="video" width="4" height="3" position="0 0 1" rotation="-90 0 0" src="assets\videoplayback.mp4" autoplay muted controls> -->
+          <a-entity geometry="primitive: plane" material="src: #video" width="4" height="3" position="0 0 1" rotation="-90 0 0"></a-entity>
           </a-video>
 
   </a-marker>
