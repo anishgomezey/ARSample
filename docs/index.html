@@ -13,7 +13,7 @@
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
-  <a-scene embedded arjs>
+  <a-scene embedded arjs debugUIEnabled: false;>
     <!-- Declare all assets like image and videos inside assets tag and point the object in the component. -->
     <!-- <a-assets>
         <video id="video" src="assets\videoplayback.mp4"></video>
@@ -27,7 +27,7 @@
           <!-- <a-video id="video" width="4" height="3" position="0 0 1" rotation="-90 0 0" src="assets\videoplayback.mp4" autoplay muted controls>
             </a-video> -->
             <a-image width="4" height="3" position="0 0 1" rotation="-90 0 0" src="assets\ey_logo.png" id="imageEY"></a-image>
-            <a-image width="4" height="3" position="0 0 1" rotation="-90 0 0" src="assets\welcomeey.jpg" hidden id="wey"></a-image>
+            <a-image width="4" height="3" position="0 0 1" rotation="-90 0 0" src="assets\welcomeey.jpg" style="display:none" id="wey"></a-image>
     <!-- <a-entity geometry="primitive: plane" material="src: #video" width="4" height="3" position="0 0 1" rotation="-90 0 0"></a-entity> -->
           
 
@@ -71,7 +71,7 @@ $("#boxObj").attr("color","green");
       });
 
       $("#imageEY").on("click",function(){
-$("#wey").show();
+$("#wey").css({'display':'block'});
       });
 
     });
